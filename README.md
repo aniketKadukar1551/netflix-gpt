@@ -2,8 +2,12 @@
     - create react application using vite
     - configure tailwind
     - header component
+    - routing of app
     - login form
     - sign up form
+    - form validation
+    - firebase setup
+    - deploying app to production
 
 # Features
     - authentication
