@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -11,6 +12,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState(null)
   const email = useRef(null)
   const password = useRef(null)
+  const navigate = useNavigate()
 
   const handleSignUp = () => {
     setIsSignUpForm(!isSignUpForm)
@@ -21,27 +23,28 @@ const Login = () => {
     setErrorMessage(message)
 
     if(!message){
-      if(isSignUpForm){
-        createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
-          .then((userCredential) => {
-            const user = userCredential.user;
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            setErrorMessage(errorCode+"-"+errorMessage)
-          });
-      } else{
-        signInWithEmailAndPassword(auth, email.current.value, password.current.value)
-          .then((userCredential) => {
-          const user = userCredential.user;
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          setErrorMessage(errorCode+"-"+errorMessage)
-        });
-      }
+      navigate("/browse")
+      // if(isSignUpForm){
+      //   createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+      //     .then((userCredential) => {
+      //       const user = userCredential.user;
+      //     })
+      //     .catch((error) => {
+      //       const errorCode = error.code;
+      //       const errorMessage = error.message;
+      //       setErrorMessage(errorCode+"-"+errorMessage)
+      //     });
+      // } else{
+      //   signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+      //     .then((userCredential) => {
+      //     const user = userCredential.user;
+      //   })
+      //   .catch((error) => {
+      //     const errorCode = error.code;
+      //     const errorMessage = error.message;
+      //     setErrorMessage(errorCode+"-"+errorMessage)
+      //   });
+      // }
     }
   }
 

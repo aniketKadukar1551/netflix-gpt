@@ -7,7 +7,8 @@
     - sign up form
     - form validation
     - firebase setup
-    - deploying app to production
+    - created redux store with userSlice
+    - implemented signout
 
 # Features
     - authentication
