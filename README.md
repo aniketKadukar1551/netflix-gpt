@@ -9,6 +9,7 @@
     - firebase setup
     - created redux store with userSlice
     - implemented signout
+    - added constants
 
 # Features
     - authentication

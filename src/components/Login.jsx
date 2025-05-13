@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "fire
 import Header from './Header'
 import { emailAndPasswordValidation } from "../utils/emailAndPasswordValidation"
 import { auth } from '../utils/firebase';
+import { NETFLIX_COVER_IMAGE } from '../utils/constants';
 
 const Login = () => {
   const [isSignUpForm, setIsSignUpForm] = useState(false)
@@ -52,8 +53,8 @@ const Login = () => {
     <div>
       <Header></Header>
       <div className='absolute'>
-        <img className='w-full' src='https://assets.nflxext.com/ffe/siteui/vlv3/cb17c41d-6a67-4472-8b91-cca977e65276/web/IN-en-20250505-TRIFECTA-perspective_03ae1a85-5dcf-4d20-a8a6-1e61f7ef73cb_large.jpg'
-        alt='logo'></img>
+        <img className='w-full' src={NETFLIX_COVER_IMAGE}
+        alt='background Image'></img>
       </div>
       <form onSubmit={(e) => e.preventDefault()} className='absolute w-3/12 bg-black  top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 opacity-80 flex flex-col max-lg:w-[260px] rounded-lg'>
         <h1 className='text-white text-4xl font-bold pl-16 mt-16'>{!isSignUpForm ? "Sign In" : "Sign Up"}</h1>
