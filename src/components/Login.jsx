@@ -1,11 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-
 import Header from './Header'
 import { emailAndPasswordValidation } from "../utils/emailAndPasswordValidation"
-import { auth } from '../utils/firebase';
 import { NETFLIX_COVER_IMAGE } from '../utils/constants';
 
 const Login = () => {
@@ -25,27 +22,6 @@ const Login = () => {
 
     if(!message){
       navigate("/browse")
-      // if(isSignUpForm){
-      //   createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
-      //     .then((userCredential) => {
-      //       const user = userCredential.user;
-      //     })
-      //     .catch((error) => {
-      //       const errorCode = error.code;
-      //       const errorMessage = error.message;
-      //       setErrorMessage(errorCode+"-"+errorMessage)
-      //     });
-      // } else{
-      //   signInWithEmailAndPassword(auth, email.current.value, password.current.value)
-      //     .then((userCredential) => {
-      //     const user = userCredential.user;
-      //   })
-      //   .catch((error) => {
-      //     const errorCode = error.code;
-      //     const errorMessage = error.message;
-      //     setErrorMessage(errorCode+"-"+errorMessage)
-      //   });
-      // }
     }
   }
 

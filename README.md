@@ -10,6 +10,8 @@
     - created redux store with userSlice
     - implemented signout
     - added constants
+    - register tmdb api and create an app to get an access token
+    - get data from tmdb now playing movies list api
 
 # Features
     - authentication
