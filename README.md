@@ -12,6 +12,14 @@
     - added constants
     - register tmdb api and create an app to get an access token
     - get data from tmdb now playing movies list api
+    - custom hook for now playing movies
+    - create movieSlice
+    - update store with movie data
+    - planning for mainContainer and secondaryContainer
+    - fetch data for trailer video
+    - update store with trailer video data
+    - embedded the youtube video and make it autoplay and mute
+    - use tailwind in mainContainer
 
 # Features
     - authentication

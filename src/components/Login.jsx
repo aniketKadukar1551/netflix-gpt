@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import Header from './Header'
@@ -26,13 +26,13 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div className='w-full'>
       <Header></Header>
       <div className='absolute'>
         <img className='w-full' src={NETFLIX_COVER_IMAGE}
         alt='background Image'></img>
       </div>
-      <form onSubmit={(e) => e.preventDefault()} className='absolute w-3/12 bg-black  top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 opacity-80 flex flex-col max-lg:w-[260px] rounded-lg'>
+      <form onSubmit={(e) => e.preventDefault()} className='absolute w-3/12 bg-black/80 top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2  flex flex-col max-lg:w-[260px] rounded-lg'>
         <h1 className='text-white text-4xl font-bold pl-16 mt-16'>{!isSignUpForm ? "Sign In" : "Sign Up"}</h1>
         {isSignUpForm && 
           <input type='text' placeholder='Full Name' className='text-white border block rounded-sm p-3 ml-16 mt-4 mr-20'></input>
