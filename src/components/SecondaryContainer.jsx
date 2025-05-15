@@ -14,9 +14,8 @@ const SecondaryContainer = () => {
       <div className="mt-[-16rem] scale-z-5 pb-[5rem]">
         <MovieList title={"Now Playing"} movies={movies?.nowPlaying}></MovieList>
         <MovieList title={"Trending"} movies={movies?.trendingMovie}></MovieList>
-        <MovieList title={"Popular"} movies={movies}></MovieList>
-        <MovieList title={"Upcoming Movies"} movies={movies}></MovieList>
-        <MovieList title={"Top Rated"} movies={movies}></MovieList>
+        <MovieList title={"Top Rated"} movies={movies?.topRatedMovie}></MovieList>
+        <MovieList title={"Upcoming Movies"} movies={movies?.upComingMovie}></MovieList>
       </div>
       
     </div>

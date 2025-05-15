@@ -5,7 +5,7 @@ import { IoMdInformationCircleOutline } from "react-icons/io";
 const VideoTitle = ({ movie_title, description }) => {
 
   return (
-    <div className='absolute pt-96 pl-20 text-white z-10'>
+    <div className='absolute pt-96 pl-20 text-white z-10 max-2xl:pt-60 max-xl:pt-40'>
       <h1 className='text-5xl font-bold '>{movie_title}</h1>
       <p className='w-2xl mt-3 text-white'>{description}</p>
       <div className='mt-5 flex text-black'>
