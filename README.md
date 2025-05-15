@@ -20,6 +20,10 @@
     - update store with trailer video data
     - embedded the youtube video and make it autoplay and mute
     - use tailwind in mainContainer
+    - build the secondary container
+    - build movie list
+    - build movie card
+    - tmdb image cdn url
 
 # Features
     - authentication

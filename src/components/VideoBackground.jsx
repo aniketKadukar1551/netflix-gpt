@@ -10,10 +10,10 @@ const VideoBackground = ({movieId}) => {
   useMovieTrailer(movieId)
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <iframe 
-        className="w-screen aspect-video min-w-6xl"
-        src={`https://www.youtube.com/embed/${movieTrailer?.key}?si=R66VBITcl8d5eETv&autoplay=1&mute=1`}
+        className="w-screen aspect-video min-w-6xl transform scale-113"
+        src={`https://www.youtube.com/embed/${movieTrailer?.key}?si=R66VBITcl8d5eETv&autoplay=1&mute=1&loop=1&playlist=${movieTrailer?.key}&controls=0&modestbranding=1&rel=0`}
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
       </iframe>
