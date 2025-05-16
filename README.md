@@ -24,6 +24,10 @@
     - build movie list
     - build movie card
     - tmdb image cdn url
+    - useNowPlayingMovies, useTopRatedMovies, useTrendingMovies, useUpComingMovies custom hooks.
+    - gtp search page
+    - gpt search bar
+    - Implemented multi language feature in app.
 
 # Features
     - authentication
