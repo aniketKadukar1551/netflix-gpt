@@ -8,13 +8,13 @@ import { addTopRatedMovies } from '../utils/nowPlayingMoviesSlice'
 export const useTopRatedMovies = () => {
     const dispatch = useDispatch()
     
-    const fetchNowPlayingData = async () => {
+    const fetchTopRatedMovieData = async () => {
         const response = await fetch('https://api.themoviedb.org/3/movie/top_rated?&page=1', API_OPTIONS)
         const data = await response.json()
         dispatch(addTopRatedMovies(data?.results))
     }
     
     useEffect(() => { 
-        fetchNowPlayingData()
+        fetchTopRatedMovieData()
     }, [])
 }
